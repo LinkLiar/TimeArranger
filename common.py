@@ -2,14 +2,18 @@ import datetime
 import time
 
 
-def NowStr():
-    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+def Now(type="stamp"):
+    if(type == "str"):
+        return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+    else:
+        return time.localtime(time.time())
 
-def NowStamp():
-    return time.localtime(time.time())
 
-def CalDeltaSecond(EndStr, StartStr):
-    start = datetime.datetime.strptime(StartStr, "%Y-%m-%d %H:%M:%S")
-    end = datetime.datetime.strptime(EndStr, "%Y-%m-%d %H:%M:%S")
-    return (end - start).total_seconds()
+def CalDelta(end, start):
 
+    if(type(end) == str and type(start) == str):
+        start = datetime.datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
+        end = datetime.datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
+        return (end - start).total_seconds()
+    else:
+        return end - start
