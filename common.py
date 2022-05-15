@@ -1,5 +1,6 @@
 import datetime
 import time
+import json
 
 
 def Now(type="stamp"):
@@ -17,3 +18,25 @@ def CalDelta(end, start):
         return (end - start).total_seconds()
     else:
         return end - start
+
+
+def Insert(end, start):
+    pass
+
+
+class TimeArranger(object):
+    def __init__(self, record) -> None:
+        self.record = record
+        pass
+
+    def save():
+        pass
+
+    def insert():
+        pass
+
+    def adjust():
+        pass
+
+    def summarize():
+        pass
