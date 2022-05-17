@@ -20,13 +20,14 @@ def CalDelta(end, start):
         return end - start
 
 
-class TimeArranger(object):
+class TimeArranger:
+
     def __init__(self, record) -> None:
         self.record = record
-        self.Dict 
+        self.Dict = {}
         pass
 
-    def Save():
+    def Save(self):
         json.dumps(self.Dict)
         pass
 
@@ -40,7 +41,5 @@ class TimeArranger(object):
         pass
 
 
-
 # JSON Object -> json.loads() -> Python Dict
 # Python Dict -> json.dumps() -> JSON Object
-
